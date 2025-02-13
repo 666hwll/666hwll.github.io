@@ -10,33 +10,33 @@
 <body>
   <h1>Links:</h1>
   <p id="links"> 
-    1. https://validator.w3.org/nu/ <br> 
-    2. https://leetcode.com <br>
-    3. https://automatetheboringstuff.com <br>
-    4. https://command-not-found.com <br>
-    5. https://ollama.com/search <br>
-    6. https://forum.puppylinux.com/puppy-linux-collection <br>
-    7. https://www.geogebra.org/download <br>
-    8. https://archive.org <br>
-    9. https://alternativeto.net <br>
-   10. https://www.wolframalpha.com <br>
-   11. https://fpgatutorial.com <br>
-   12. https://www.onlinegdb.com <br>
-   13. https://keepassxc.org/docs/ <br>
-   14. https://www.proxmox.com/de/ <br>
-   15. https://foundation.mozilla.org/en/privacynotincluded/ <br>
-   16. https://verdant.net <br>
-   17. https://repair.wiki/w/Main_Page#gsc.tab=0 <br>
-   18. https://www.techlore.tech/resources <br>
-   19. https://www.explainingcomputers.com <br>
-   20. https://www.rapidtables.com/convert/number/binary-to-decimal.html?x=101110 <br>
-   21. https://haveibeenpwned.com <br>
-   22. https://wiki.rossmanngroup.com/wiki/Mission_statement <br>
-   23. https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html <br>
-   24. https://www.analog.com/en/resources/media-center/videos/series/ltspice-getting-started-tutorial.html <br>
-   25. https://verifymail.io/domain/google.com <br>
-   26. https://backgroundchecks.org/justdeleteme/ <br>
-   27. https://www.gethomebank.org/en/index.php <br>
+    https://validator.w3.org/nu/ <br> 
+    https://leetcode.com <br>
+    https://automatetheboringstuff.com <br>
+    https://command-not-found.com <br>
+    https://ollama.com/search <br>
+    https://forum.puppylinux.com/puppy-linux-collection <br>
+    https://www.geogebra.org/download <br>
+    https://archive.org <br>
+    https://alternativeto.net <br>
+    https://www.wolframalpha.com <br>
+    https://fpgatutorial.com <br>
+    https://www.onlinegdb.com <br>
+    https://keepassxc.org/docs/ <br>
+    https://www.proxmox.com/de/ <br>
+    https://foundation.mozilla.org/en/privacynotincluded/ <br>
+    https://verdant.net <br>
+    https://repair.wiki/w/Main_Page#gsc.tab=0 <br>
+    https://www.techlore.tech/resources <br>
+    https://www.explainingcomputers.com <br>
+    https://www.rapidtables.com/convert/number/binary-to-decimal.html?x=101110 <br>
+    https://haveibeenpwned.com <br>
+    https://wiki.rossmanngroup.com/wiki/Mission_statement <br>
+    https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html <br>
+    https://www.analog.com/en/resources/media-center/videos/series/ltspice-getting-started-tutorial.html <br>
+    https://verifymail.io/domain/google.com <br>
+    https://backgroundchecks.org/justdeleteme/ <br>
+    https://www.gethomebank.org/en/index.php <br>
   </p>
   <button onclick="saveTextAsFile()">Speichern als .txt</button> <br>
   <a href="https://666hwll.github.io/index.html"> Homepage </a>
@@ -58,11 +58,27 @@
             link.click();
             document.body.removeChild(link);
         }
+        function nummerieren() {
+            let pElement = document.getElementById("text");
+
+            // Den HTML-Inhalt holen (inklusive <br>)
+            let htmlText = pElement.innerHTML;
+
+            // In einzelne Zeilen aufteilen (basierend auf <br>)
+            let zeilen = htmlText.split("<br>");
+
+            // Nummerierung hinzufügen
+            let nummerierteZeilen = zeilen.map((zeile, index) => (index + 1) + ". " + zeile);
+
+            // Die Zeilen mit <br> wieder zusammenfügen und ins <p> setzen
+            pElement.innerHTML = nummerierteZeilen.join("<br>");
+        }
     </script>
 </body>
 </html>
 
 
+    
 
 
   

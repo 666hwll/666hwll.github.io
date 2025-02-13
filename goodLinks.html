@@ -41,6 +41,22 @@
   <button onclick="saveTextAsFile()">Speichern als .txt</button> <br>
   <a href="https://666hwll.github.io/index.html"> Homepage </a>
     <script>
+     window.onload = () => {
+            let pElement = document.getElementById("text");
+
+            // Den HTML-Inhalt holen (inklusive <br>)
+            let htmlText = pElement.innerHTML;
+
+            // In einzelne Zeilen aufteilen (basierend auf <br>)
+            let zeilen = htmlText.split("<br>");
+
+            // Nummerierung hinzufügen
+            let nummerierteZeilen = zeilen.map((zeile, index) => (index + 1) + ". " + zeile);
+
+            // Die Zeilen mit <br> wieder zusammenfügen und ins <p> setzen
+            pElement.innerHTML = nummerierteZeilen.join("<br>");
+        } 
+        
         function saveTextAsFile() {
             // Den reinen Text aus dem <p>-Element holen
             let text = document.getElementById("links").textContent;
@@ -58,22 +74,7 @@
             link.click();
             document.body.removeChild(link);
         }
-        function nummerieren() {
-            let pElement = document.getElementById("text");
-
-            // Den HTML-Inhalt holen (inklusive <br>)
-            let htmlText = pElement.innerHTML;
-
-            // In einzelne Zeilen aufteilen (basierend auf <br>)
-            let zeilen = htmlText.split("<br>");
-
-            // Nummerierung hinzufügen
-            let nummerierteZeilen = zeilen.map((zeile, index) => (index + 1) + ". " + zeile);
-
-            // Die Zeilen mit <br> wieder zusammenfügen und ins <p> setzen
-            pElement.innerHTML = nummerierteZeilen.join("<br>");
-        } 
-        window.onload = nummerieren;
+        
     </script>
 </body>
 </html>

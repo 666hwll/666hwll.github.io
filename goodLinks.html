@@ -9,7 +9,7 @@
 </head>
 <body>
   <h1>Links:</h1>
-  <p> 1. https://validator.w3.org/nu/ <br> 
+  <p id="links"> 1. https://validator.w3.org/nu/ <br> 
     2. https://leetcode.com <br>
     3. https://automatetheboringstuff.com <br>
     4. https://command-not-found.com <br>
@@ -25,6 +25,32 @@
    14. https://www.proxmox.com/de/ <br>
    15. https://foundation.mozilla.org/en/privacynotincluded/ <br>
   </p>
-      <a href="https://666hwll.github.io/index.html"> Homepage </a>
+  <button onclick="saveTextAsFile()">Speichern als .txt</button>
+  <a href="https://666hwll.github.io/index.html"> Homepage </a>
+    <script>
+        function saveTextAsFile() {
+            // Den reinen Text aus dem <p>-Element holen
+            let text = document.getElementById("links").textContent;
+
+            // Ein Blob-Objekt mit dem Text erstellen
+            let blob = new Blob([text], { type: "text/plain" });
+
+            // Ein temporäres <a>-Element erstellen
+            let link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "links.txt"; // Dateiname
+
+            // Das <a>-Element automatisch klicken und dann entfernen
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+  
+

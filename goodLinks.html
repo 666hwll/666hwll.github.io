@@ -37,26 +37,11 @@
     https://verifymail.io/domain/google.com <br>
     https://backgroundchecks.org/justdeleteme/ <br>
     https://www.gethomebank.org/en/index.php <br>
+    https://wiki.futo.org/wiki/Introduction_to_a_Self_Managed_Life:_a_13_hour_%26_28_minute_presentation_by_FUTO_software <br>
   </p>
   <button onclick="saveTextAsFile()">Speichern als .txt</button> <br>
   <a href="https://666hwll.github.io/index.html"> Homepage </a>
-    <script>
-     window.onload = () => {
-            let pElement = document.getElementById("text");
-
-            // Den HTML-Inhalt holen (inklusive <br>)
-            let htmlText = pElement.innerHTML;
-
-            // In einzelne Zeilen aufteilen (basierend auf <br>)
-            let zeilen = htmlText.split("<br>");
-
-            // Nummerierung hinzufügen
-            let nummerierteZeilen = zeilen.map((zeile, index) => (index + 1) + ". " + zeile);
-
-            // Die Zeilen mit <br> wieder zusammenfügen und ins <p> setzen
-            pElement.innerHTML = nummerierteZeilen.join("<br>");
-        } 
-        
+    <script>  
         function saveTextAsFile() {
             // Den reinen Text aus dem <p>-Element holen
             let text = document.getElementById("links").textContent;

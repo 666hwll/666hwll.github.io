@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giant Clock</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section id="clock-panel">
+            <time id="clock" aria-live="polite"></time>
+        </section>
+       
+    </main>
+    
+    <footer></footer>
+    <script>
+        const clock = document.getElementById('clock');
+
+        function updateClock() {
+            const now = new Date();
+            clock.textContent = now.toLocaleTimeString('de-AT', {
+                timeZone: 'Europe/Vienna',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+
+</html>

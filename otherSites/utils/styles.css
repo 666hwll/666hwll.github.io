@@ -1,0 +1,60 @@
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f4f1de;
+    background: #172121;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: #172121;
+}
+
+main {
+    width: min(100%, 1100px);
+}
+
+#clock-panel {
+    display: flex;
+    min-height: 260px;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(28px, 7vw, 76px);
+    border: 8px solid #f4f1de;
+    background: #d1495b;
+    box-shadow: 16px 16px 0 #f4f1de;
+}
+
+#clock {
+    color: #172121;
+    font-size: clamp(3.5rem, 12vw, 10rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 16px;
+    }
+
+    #clock-panel {
+        min-height: 190px;
+        border-width: 5px;
+        box-shadow: 10px 10px 0 #f4f1de;
+    }
+}
